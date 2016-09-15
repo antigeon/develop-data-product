@@ -1,0 +1,38 @@
+Introduction to dataset "cars"
+========================================================
+author: Geon
+date:Sep 15.      2016
+autosize: True
+
+First Slide
+========================================================
+
+The data give the speed of cars and the distances taken to stop.
+
+- 	 speed	 numeric	 Speed (mph)
+- 	 dist	 numeric	 Stopping distance (ft)
+- Ezekiel, M. (1930) Methods of Correlation Analysis. Wiley.
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+lm(dist~.,cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Slide with Histgram
+=========================================
+```{r,echo=FALSE}
+par(mfrow=c(2,1))
+hist(cars$speed)
+hist(cars$dist)
+```
+
