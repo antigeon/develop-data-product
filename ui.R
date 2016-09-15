@@ -5,8 +5,12 @@ shinyUI(
         sidebarPanel(
             numericInput('choices','How many choices do you have?',value = 6),
             numericInput('choosed','How many choices you need to choose?',value = 1),
+            radioButtons("replacement", "In multipule process, is replacement be allowed?", choices = list(TRUE,FALSE),selected = FALSE),
             submitButton('Submit')
+
         ),
+
+
         mainPanel(
             h3('Results of the ballot box'),
             h4('The number of choices you have(6 is default)'),
